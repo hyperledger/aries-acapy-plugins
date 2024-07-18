@@ -29,7 +29,7 @@ class ManagedPoetrySections(str, Enum):
     INT_DEPS = "[tool.poetry.group.integration.dependencies]"
     RUFF = "[tool.ruff]"
     RUFF_LINT = "[tool.ruff.lint]"
-    RUFF_FILES = "[tool.ruff.per-file-ignores]"
+    RUFF_FILES = "[tool.ruff.lint.per-file-ignores]"
     PYTEST = "[tool.pytest.ini_options]"
     COVERAGE = "[tool.coverage.run]"
     COVERAGE_REPORT = "[tool.coverage.report]"
@@ -303,9 +303,6 @@ def update_all_poetry_locks():
             subprocess.run(["poetry", "lock"], cwd=root)
 
 def upgrade_library_in_all_plugins(library: str = None):
-    if library is None:
-        library = input("Enter the library to upgrade: ")
-        
     for root, _, files in os.walk("."):
         if "poetry.lock" in files:
             with open(f"{root}/poetry.lock", "r") as file:
