@@ -6,14 +6,14 @@ import logging
 import ssl
 from typing import List, Optional, Union
 
-from aiokafka.producer.producer import AIOKafkaProducer
-from aries_cloudagent.core.profile import Profile
-from aries_cloudagent.transport.outbound.base import (
+from acapy_agent.core.profile import Profile
+from acapy_agent.transport.outbound.base import (
     BaseOutboundTransport,
     BaseWireFormat,
     OutboundTransportError,
 )
-from aries_cloudagent.transport.outbound.manager import QueuedOutboundMessage
+from acapy_agent.transport.outbound.manager import QueuedOutboundMessage
+from aiokafka.producer.producer import AIOKafkaProducer
 
 from .config import OutboundConfig, get_config
 

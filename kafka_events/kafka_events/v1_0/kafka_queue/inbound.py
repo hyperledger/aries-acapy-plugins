@@ -7,11 +7,11 @@ import ssl
 from json import JSONDecodeError
 from typing import cast
 
+from acapy_agent.messaging.error import MessageParseError
+from acapy_agent.transport.error import RecipientKeysError, WireFormatParseError
+from acapy_agent.transport.inbound.base import BaseInboundTransport
 from aiokafka import AIOKafkaConsumer
 from aiokafka.structs import ConsumerRecord
-from aries_cloudagent.messaging.error import MessageParseError
-from aries_cloudagent.transport.error import RecipientKeysError, WireFormatParseError
-from aries_cloudagent.transport.inbound.base import BaseInboundTransport
 
 from .config import InboundConfig, get_config
 

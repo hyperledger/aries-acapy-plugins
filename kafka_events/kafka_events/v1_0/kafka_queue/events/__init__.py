@@ -7,11 +7,11 @@ import ssl
 from string import Template
 from typing import Optional, cast
 
+from acapy_agent.config.injection_context import InjectionContext
+from acapy_agent.core.event_bus import Event, EventBus, EventWithMetadata
+from acapy_agent.core.profile import Profile
+from acapy_agent.core.util import SHUTDOWN_EVENT_PATTERN, STARTUP_EVENT_PATTERN
 from aiokafka import AIOKafkaProducer
-from aries_cloudagent.config.injection_context import InjectionContext
-from aries_cloudagent.core.event_bus import Event, EventBus, EventWithMetadata
-from aries_cloudagent.core.profile import Profile
-from aries_cloudagent.core.util import SHUTDOWN_EVENT_PATTERN, STARTUP_EVENT_PATTERN
 
 from ..config import EventsConfig, get_config
 

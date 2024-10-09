@@ -229,7 +229,7 @@ files = [
 cached-property = ">=1.5.2,<1.6.0"
 
 [[package]]
-name = "aries-cloudagent"
+name = "acapy-agent"
 version = "1.0.0"
 description = "Hyperledger Aries Cloud Agent Python (ACA-Py) is a foundation for building decentralized identity applications and services running in non-mobile environments."
 optional = true
@@ -2521,7 +2521,7 @@ idna = ">=2.0"
 multidict = ">=4.0"
 
 [extras]
-aca-py = ["aries-cloudagent"]
+aca-py = ["acapy-agent"]
 
 [metadata]
 lock-version = "2.0"

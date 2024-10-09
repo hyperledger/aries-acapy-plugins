@@ -1,4 +1,5 @@
-from aries_cloudagent.config.settings import Settings
+from acapy_agent.config.settings import Settings
+
 from kafka_queue import config
 from kafka_queue.config import EventsConfig, InboundConfig, OutboundConfig
 
